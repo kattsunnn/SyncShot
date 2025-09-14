@@ -1,0 +1,7 @@
+/* ボディ */
+.body {
+  flex: 1;                  /* ヘッダーとフッターの間を埋める */
+  margin-top: var(--header-height);    /* ヘッダーぶん下げる */
+  margin-bottom: var(--footer-height); /* フッターぶん上げる */
+  background: #f1f1f1;       /* 背景色（切り替え可能） */
+}

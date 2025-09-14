@@ -1,0 +1,19 @@
+.header {
+  position: fixed;        /* 画面上部に固定 */
+  top: 0;
+  left: 0;
+  width: 100%;            /* 横いっぱいに広げる */
+  height: var(--header-height);        /* ヘッダーの高さ */
+  background: #fff;    /* 背景色（好みで変更） */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15); /* ほんのり下に影 */
+  display: flex;
+  flex-direction: row;   /* ← 明記するとわかりやすい */
+  justify-content: flex-start; /* 横方向の揃え（左寄せ） */
+  align-items: center;   /* 縦方向の中央揃え */
+}
+
+.logo {
+  color: #333;
+  margin-left: 40px;     /* 左の余白 */
+  font-size: 30px;
+}

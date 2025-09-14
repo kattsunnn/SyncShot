@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { FolderOpen } from "lucide-react";
 import './UploadScreen.css'
 
 function UploadScreen() {
@@ -6,10 +7,8 @@ function UploadScreen() {
   const [dragActive, setDragActive] = useState(false)
 
   return (
+    
     <div className="app-container">
-      <header className="header">
-        <h1>SyncShot</h1>
-      </header>
 
       <main className="main-content">
         <div 
@@ -27,7 +26,9 @@ function UploadScreen() {
               className="file-input"
             />
             <label htmlFor="video-upload" className="upload-label">
-              <div className="upload-icon">📁</div>
+              <div>
+                <FolderOpen className="upload-icon" />
+              </div>
               <div className="upload-text">
                 <p>ドラッグ＆ドロップで動画をアップロード</p>
                 <p>または</p>
