@@ -77,19 +77,15 @@
 
 /* 動画リストのコンテナ */
 .video-list-container {
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   padding: 20px;
 }
 
 .video-list-container h2 {
-  margin-top: 0;
-  color: #333;
-  font-size: 1.4em;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
+  margin: 0px;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 
 .video-list-container ul {
@@ -100,24 +96,22 @@
 
 .video-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
-  font-size: 1em;
-  color: #444;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 
-.video-item:last-child {
-  border-bottom: none;
+.video-item video {
+  width: 200px; /* 動画プレビューの幅を少し広げる */
+  height: auto;
+  border-radius: 8px; /* 角を丸くする */
 }
 
 .video-name {
-  flex: 1; /* 名前が長くなっても対応 */
-  white-space: nowrap; /* テキストを折り返さない */
-  overflow: hidden; /* はみ出た部分を非表示 */
-  text-overflow: ellipsis; /* ...で省略 */
-  margin-right: 15px;
+  flex-grow: 1; /* ファイル名が使えるスペースを最大限に広げる */
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .remove-button {
@@ -127,7 +121,8 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 18px;    /* テキストのサイズを18pxに設定 */
+  font-weight: 500;   /* フォントの太さをミディアムに設定 */
   transition: background-color 0.2s ease;
 }
 
@@ -145,8 +140,8 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   transition: background-color 0.2s ease;
 }
 

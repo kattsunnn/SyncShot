@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // useNavigateをインポート
 import { FolderOpen, UploadCloud } from 'lucide-react'; // UploadCloudアイコンも追加
 import './UploadScreen.css'; // このCSSファイルにスタイルを記述します
 
 function UploadScreen() {
   const [videos, setVideos] = useState([]);
   const [dragActive, setDragActive] = useState(false);
+  const navigate = useNavigate(); // useNavigateフックを呼び出す
 
   // ドラッグ&ドロップのハンドラー
   const handleDrag = (e) => {
@@ -49,6 +51,10 @@ function UploadScreen() {
     setVideos(prevVideos => prevVideos.filter(video => video.id !== idToRemove));
   };
 
+  const handleNext = () => {
+    // '/sync'のパスに遷移する
+    navigate('/sync');
+  };
 
   return (
     <div className="upload-screen-container">
@@ -89,6 +95,10 @@ function UploadScreen() {
           <ul>
             {videos.map((video) => (
               <li key={video.id} className="video-item">
+                <video controls>
+                <source src={video.url} type="video/mp4" />
+                ブラウザが動画に対応していません。
+                </video>
                 <span className="video-name">{video.name}</span>
                 <button
                   type="button"
@@ -100,7 +110,13 @@ function UploadScreen() {
               </li>
             ))}
           </ul>
-          <button type="button" className="next-button">次へ</button>
+          <button
+            type="button"
+            className="next-button"
+            onClick={handleNext} // 新しいハンドラを適用
+          >
+            次へ
+          </button>
         </div>
       )}
     </div>
