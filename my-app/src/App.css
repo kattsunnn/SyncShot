@@ -1,3 +1,8 @@
+body {
+  margin: 0; /* body要素のデフォルトマージンをリセット */
+  padding: 0; /* body要素のデフォルトパディングをリセット */
+}
+
 .app-container {
   --header-height: 80px;
   --footer-height: 30px;
@@ -7,4 +12,5 @@
   font-family: "Poppins", sans-serif;
   color: #333;
 }
+
 

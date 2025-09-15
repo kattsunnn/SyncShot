@@ -1,0 +1,8 @@
+.main-content {
+  flex: 1; /* 親要素の残りのスペースを埋める */
+  margin-top: var(--header-height);
+  margin-bottom: var(--footer-height);
+  padding: 0%;
+  background: #f1f1f1;
+}
+
