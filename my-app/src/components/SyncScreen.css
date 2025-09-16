@@ -1,0 +1,50 @@
+.sync-screen-container {
+    display: flex;
+  flex-direction: column;
+  gap: 30px; /* 各セクション間のスペース */
+  padding: 20px;
+  margin: 0 auto; /* 中央寄せ */
+}
+
+/* 動画リストのコンテナ */
+.video-list-container {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.video-list-container h2 {
+  margin: 0px;
+  padding: 0 0 15px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.video-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.video-item:first-child {
+  border-top: 1px solid hsl(0, 0%, 90%);
+}
+
+.video-item video {
+  width: 200px; /* 動画プレビューの幅を少し広げる */
+  height: auto;
+  border-radius: 8px; /* 角を丸くする */
+}
+
+.video-name {
+  flex-grow: 1; /* ファイル名が使えるスペースを最大限に広げる */
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+}

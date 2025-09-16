@@ -52,8 +52,7 @@ function UploadScreen() {
   };
 
   const handleNext = () => {
-    // '/sync'のパスに遷移する
-    navigate('/sync');
+    navigate('/sync', { state: { videos } });
   };
 
   return (
