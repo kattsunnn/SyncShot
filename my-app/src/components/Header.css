@@ -10,6 +10,7 @@
   flex-direction: row;   /* ← 明記するとわかりやすい */
   justify-content: flex-start; /* 横方向の揃え（左寄せ） */
   align-items: center;   /* 縦方向の中央揃え */
+  z-index: 1000; /* 他の要素より前面に表示 */
 }
 
 .logo {
