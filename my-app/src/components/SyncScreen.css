@@ -6,12 +6,41 @@
   margin: 0 auto; /* 中央寄せ */
 }
 
+.video-preview-container {
+  display: flex;
+  gap: 20px; /* プレビュー間のスペース */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.reference-preview, .sync-preview {
+  position: relative;
+  flex: 1; /* プレビューの幅を調整 */
+  height: 300px; /* プレビューの高さを固定 */
+  border: 2px solid hsl(0, 0%, 90%); /* 枠線 */
+  border-radius: 12px; /* 角を丸くする */
+  background-color: hsl(0, 0%, 100%);
+}
+
+.preview-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: hsl(0, 0%, 70%);
+    font-size: 18px;
+    font-weight: 500;
+}
+
 /* 動画リストのコンテナ */
 .video-list-container {
   background-color: hsl(0, 0%, 100%);
   border-radius: 12px;
   padding: 20px;
 }
+
+
 
 .video-list-container h2 {
   margin: 0px;

@@ -6,7 +6,16 @@ function SyncScreen() {
   const { videos } = location.state || { videos: [] };
 
   return (
+
     <div className="sync-screen-container">
+      <div className="video-preview-container">
+        <div className="reference-preview">
+          <p className="preview-text">１．基準とする動画を選択し，同期点を決める</p>
+        </div>
+        <div className="sync-preview">
+          <p className="preview-text">２．他の動画を選択し，基準に合わせて同期点を決める</p>
+        </div>
+      </div>
       {videos.length > 0 ? (
         <div className="video-list-container">
           <ul>

@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="app-container">
         <Header />
-        <MainContent />   {/* これで中の Routes が使える */}
+        <MainContent /> 
         <Footer />
       </div>
     </Router>
