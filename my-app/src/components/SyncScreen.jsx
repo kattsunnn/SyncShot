@@ -22,26 +22,44 @@ function SyncScreen() {
   return (
 
     <div className="sync-screen-container">
-      <div className="video-preview-container">
-        <div className="reference-preview">
-          {referenceVideo ? (
-            <video controls className="preview-video">
-              <source src={referenceVideo.url} type="video/mp4" />
-              ブラウザが動画に対応していません。
-            </video>
-          ) : (
-            <p className="preview-text">１．基準とする動画を選択し，同期点を決める</p>
-          )}
+      <div className="preview-container">
+        <div className='reference-container'>
+          <div className="reference-preview">
+            {referenceVideo ? (
+              <video controls className="preview-video">
+                <source src={referenceVideo.url} type="video/mp4" />
+                ブラウザが動画に対応していません。
+              </video>
+            ) : (
+              <p className="preview-text">１．基準とする動画を選択し，同期点を決める</p>
+            )}
+          </div>
+          <div className='preview-functions'>
+              <button 
+                className="reference-button"
+              >
+                参照
+              </button>
+          </div>
         </div>
-        <div className="sync-preview">
-          {syncVideo ? (
-            <video controls className="preview-video">
-              <source src={syncVideo.url} type="video/mp4" />
-              ブラウザが動画に対応していません。
-            </video>
-          ) : (
-            <p className="preview-text">２．他の動画を選択し，基準に合わせて同期点を決める</p>
-          )}
+        <div className='sync-container'>
+          <div className="sync-preview">
+            {syncVideo ? (
+              <video controls className="preview-video">
+                <source src={syncVideo.url} type="video/mp4" />
+                ブラウザが動画に対応していません。
+              </video>
+            ) : (
+              <p className="preview-text">２．他の動画を選択し，基準に合わせて同期点を決める</p>
+            )}
+          </div>
+          <div className='preview-functions'>
+              <button 
+                className="reference-button"
+              >
+                参照
+              </button>
+          </div>
         </div>
       </div>
       {videos.length > 0 ? (
